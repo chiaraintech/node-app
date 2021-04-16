@@ -2,10 +2,10 @@ const express = require('express');
 const router = express.Router();
 
 //LOGIN PAGE
-router.get('/login', (res) => res.render('login'));
+router.get('/login', (req, res) => res.render('login'));
 
 //REGISTER PAGE
-router.get('/register', (res) => res.render('register'));
+router.get('/register', (req, res) => res.render('register'));
 
 //REGISTER HANDLE
 router.post('/register', (req, res) => {
@@ -38,6 +38,6 @@ router.post('/register', (req, res) => {
     } else {
         res.send('pass');
     }
-})
+});
 
 module.exports = router;
