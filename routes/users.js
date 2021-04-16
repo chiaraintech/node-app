@@ -2,9 +2,9 @@ const express = require('express');
 const router = express.Router();
 
 //LOGIN PAGE
-router.get('/login', (req, res) => res.send('Login'))
+router.get('/login', (req, res) => res.render('login'))
 module.exports = router;
 
 //REGISTER PAGE
-router.get('/register', (req, res) => res.send('Register'))
+router.get('/register', (req, res) => res.render('register'))
 module.exports = router;
